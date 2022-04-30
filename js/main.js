@@ -40,4 +40,5 @@ for(var i = 0; i < from.length; i++){
 }
 
 demo2.innerHTML = text;
+console.log(text)
 
