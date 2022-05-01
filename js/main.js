@@ -49,3 +49,5 @@ const a = 20 + 20
 const demo4 = document.getElementById('demo4');
 demo4.innerHTML = Date() + " " + a
 
+const heading = document.querySelector('#heading');
+  heading.style.color = 'red';
