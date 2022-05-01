@@ -29,16 +29,23 @@ const myQuery = document.querySelectorAll('.anchor');
 console.log(myQuery)
 
 
-const from = document.querySelectorAll('.from');
-const demo2 = document.querySelector('#demo2')
+// const from = document.querySelectorAll('.from');
+// const demo2 = document.querySelector('#demo2')
 
-var text = "";
+// var text = "";
 
-for(var i = 0; i < from.length; i++){
+// for(var i = 0; i < from.length; i++){
 
-   text += from.elements[i].value + "<br>"
-}
+//    text += from.elements[i].value + "<br>"
+// }
 
 demo2.innerHTML = text;
 console.log(text)
+
+const img = document.getElementById('img');
+console.dir(img)
+
+const a = 20 + 20
+const demo4 = document.getElementById('demo4');
+demo4.innerHTML = Date() + " " + a
 
