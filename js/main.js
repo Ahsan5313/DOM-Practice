@@ -85,3 +85,9 @@ function myMoved(){
 
   console.log('Hello, World!')
 }
+
+function myChange(){
+
+    const head = document.querySelector("#head");
+    head.innerHTML = 'Hello, World!'
+}
