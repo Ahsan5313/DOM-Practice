@@ -77,3 +77,11 @@ function myMove(){
 
 
 }
+
+const btn = document.querySelector("#btn");
+btn.onclick = myMoved;
+
+function myMoved(){
+
+  console.log('Hello, World!')
+}
