@@ -91,3 +91,27 @@ function myChange(){
     const head = document.querySelector("#head");
     head.innerHTML = 'Hello, World!'
 }
+
+const click = document.getElementById('click');
+
+click.addEventListener('click', function(){
+
+  console.log('Hello world')
+})
+
+click.addEventListener('mouseover', function(){
+
+  console.log('User mouse over here')
+})
+
+const clicked = document.getElementById('clicked');
+
+clicked.addEventListener('click', function(){
+
+    myFun('Hello World')
+});
+
+function myFun(text){
+
+  console.log(text)
+}
