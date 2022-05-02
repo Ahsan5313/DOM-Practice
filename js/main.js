@@ -115,3 +115,24 @@ function myFun(text){
 
   console.log(text)
 }
+
+const body = document.querySelector('body');
+console.log(body.children);
+
+const h1 = document.getElementById('h1');
+console.log(h1.firstChild.nodeValue)
+
+const h11 = document.getElementById('h11');
+const para = document.getElementById('para');
+
+para. innerHTML = h11.innerHTML;
+console.log(h11.innerHTML)
+console.log(h11.firstChild.nodeValue);
+console.log(para.childNodes[0].nodeValue)
+
+const ul = document.querySelector('ul');
+console.log(ul.childNodes[0].nextSibling.innerHTML);
+console.log(ul.childNodes[1].nextSibling.innerHTML);
+console.log(ul.childNodes[2].nextSibling.innerHTML);
+console.log(ul.childNodes[3].nextSibling.innerHTML);
+console.log(ul.childNodes[4].nextSibling.innerHTML);
