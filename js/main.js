@@ -229,3 +229,14 @@ const item = document.querySelector('.item:nth-child(3)');
 item.style.color = 'red';
 const itemOther = item.previousElementSibling;
 itemOther.style.color = 'green';
+
+const newElement = document.createElement('li');
+newElement.className = 'items';
+newElement.setAttribute('id', 'items');
+const newText = document.createTextNode('Item 0');
+newElement.appendChild(newText);
+const amiMeansParent = document.querySelector('.amiMeansParent');
+const newParent = amiMeansParent.querySelector('.item');
+amiMeansParent.insertBefore(newElement, newParent);
+console.dir(document)
+console.log(newElement)
