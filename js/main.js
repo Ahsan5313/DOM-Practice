@@ -240,3 +240,24 @@ const newParent = amiMeansParent.querySelector('.item');
 amiMeansParent.insertBefore(newElement, newParent);
 console.dir(document)
 console.log(newElement)
+
+const input = document.getElementById('input')
+
+const creatElement = function(task){
+
+  const creatLi = document.createElement('li');
+  const check = document.createElement('input');
+  check.type = 'checkbox';
+  const label = document.createElement('label');
+  label.innerHTML = task;
+  creatLi.appendChild(check);
+  creatLi.appendChild(label)
+  
+  return creatLi;
+}
+
+
+let addTask = function(event){
+
+   event.preventDefault()
+}
