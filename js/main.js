@@ -262,32 +262,69 @@
 //    event.preventDefault()
 // }
 
-function test(n){
+// function test(n){
 
-  function a(){
+//   function a(){
 
-    return n % 3 == 0
-  }
-  function b(){
+//     return n % 3 == 0
+//   }
+//   function b(){
 
-    return n % 5 == 0
-  }
-  function c(){
+//     return n % 5 == 0
+//   }
+//   function c(){
 
-    return n % 2 == 0
-  }
+//     return n % 2 == 0
+//   }
 
-  if(a() && b()){
+//   if(a() && b()){
 
-    console.log(n + ' Is divisible by 3 and 5 ')
-  }else if(a() || b() || c()){
+//     console.log(n + ' Is divisible by 3 and 5 ')
+//   }else if(a() || b() || c()){
 
-      console.log(n + ' solved')
-  }else{
+//       console.log(n + ' solved')
+//   }else{
 
-    console.log('Not valid')
-  }
+//     console.log('Not valid')
+//   }
+// }
+// test(65);
+
+
+
+function simple(a , b, cb){
+
+    var c = a + b;
+    var d = a - b;
+
+    var result = cb(c, d)
+    return result;
 }
 
 
-test(65);
+function sum(a, b){
+
+    return a + b
+}
+var result = simple(8, 5, function(a, b){
+
+    return a + b
+});
+var result1 = simple(8, 5, function(a, b){
+    
+    return a - b
+});
+var result2 = simple(8, 5, function(a, b){
+
+    return a * b
+});
+var result3 = simple(8, 5, function(a, b){
+
+    return a / b
+})
+console.log(result);
+console.log(result1);
+console.log(result2);
+console.log(result3)
+
+
