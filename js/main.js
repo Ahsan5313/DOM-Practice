@@ -292,39 +292,56 @@
 
 
 
-function simple(a , b, cb){
+// function simple(a , b, cb){
 
-    var c = a + b;
-    var d = a - b;
+//     var c = a + b;
+//     var d = a - b;
 
-    var result = cb(c, d)
-    return result;
-}
+//     var result = cb(c, d)
+//     return result;
+// }
 
 
-function sum(a, b){
+// function sum(a, b){
 
-    return a + b
-}
-var result = simple(8, 5, function(a, b){
+//     return a + b
+// }
+// var result = simple(8, 5, function(a, b){
 
-    return a + b
-});
-var result1 = simple(8, 5, function(a, b){
+//     return a + b
+// });
+// var result1 = simple(8, 5, function(a, b){
     
-    return a - b
-});
-var result2 = simple(8, 5, function(a, b){
+//     return a - b
+// });
+// var result2 = simple(8, 5, function(a, b){
 
-    return a * b
-});
-var result3 = simple(8, 5, function(a, b){
+//     return a * b
+// });
+// var result3 = simple(8, 5, function(a, b){
 
-    return a / b
+//     return a / b
+// })
+// console.log(result);
+// console.log(result1);
+// console.log(result2);
+// console.log(result3)
+
+const color = ['red', 'yellow','blue', 'green']
+const btn = document.getElementById('btn');
+
+let i = 0;
+
+btn.addEventListener('click', (a) => {
+
+    const header = document.getElementById('header')
+    header.style.background = color[i];
+
+    if(i >= color.length){
+
+        i = 0
+    }else{
+
+        i++
+    }
 })
-console.log(result);
-console.log(result1);
-console.log(result2);
-console.log(result3)
-
-
