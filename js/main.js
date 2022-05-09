@@ -367,40 +367,55 @@
 // const sum = myReduce([1,2,3,4,5,68], myFun , 0);
 // console.log(sum)
 
-let btn1 = $('#btn1');
+// let btn1 = $('#btn1');
 
-let color = ['red', 'green', 'yellow', 'blue', 'black'];
+// let color = ['red', 'green', 'yellow', 'blue', 'black'];
 
-let i = 0;
+// let i = 0;
 
-function clickFun(a){
+// function clickFun(a){
 
-    let hello = $('#hello');
-    hello.innerHTML = 'This is Ahsan';
+//     let hello = $('#hello');
+//     hello.innerHTML = 'This is Ahsan';
 
-    hello.style.background = color[i]
+//     hello.style.background = color[i]
 
-    if(i >= color.length){
+//     if(i >= color.length){
 
-        i = 0
-    }else if(color[i] === 'black'){
+//         i = 0
+//     }else if(color[i] === 'black'){
 
-        hello.style.color = 'white'
-        i++
-    }else{
+//         hello.style.color = 'white'
+//         i++
+//     }else{
 
-        i++
-    }
+//         i++
+//     }
     
-}
+// }
 
-btn1.addEventListener('click', clickFun)
+// btn1.addEventListener('click', clickFun)
 
+// const btn2 = $('#btn2')
 
-
-
+// console.dir( btn2.style)
 
 function $(selector){
 
     return document.querySelector(selector)
 }
+
+let btn2 = $('#btn2');
+// btn2.style.color = 'red';
+// btn2.style.fontSize = '50px';
+// btn2.style.textAlign = 'center';
+// btn2.style.background = 'black';
+
+const h1Style = {
+
+    background : 'black',
+    color : 'red',
+    fontSize : '50px',
+    textAlign : 'center'
+}
+Object.assign(btn2.style, h1Style)
