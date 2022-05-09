@@ -327,21 +327,42 @@
 // console.log(result2);
 // console.log(result3)
 
-const color = ['red', 'yellow','blue', 'green']
-const btn = document.getElementById('btn');
+// const color = ['red', 'yellow','blue', 'green']
+// const btn = document.getElementById('btn');
 
-let i = 0;
+// let i = 0;
 
-btn.addEventListener('click', (a) => {
+// btn.addEventListener('click', (a) => {
 
-    const header = document.getElementById('header')
-    header.style.background = color[i];
+//     const header = document.getElementById('header')
+//     header.style.background = color[i];
 
-    if(i >= color.length){
+//     if(i >= color.length){
 
-        i = 0
-    }else{
+//         i = 0
+//     }else{
 
-        i++
-    }
-})
+//         i++
+//     }
+// })
+
+
+
+function myReduce(arr, cb, acc){
+
+  for(let i = 0; i < a.length; i++){
+
+    acc = cb(acc, a[i])
+  }
+
+  return acc
+
+}
+
+function myFun(a , b){
+
+    return a + b
+}
+
+const sum = myReduce([1,2,3,4,5,68], myFun , 0);
+console.log(sum)
