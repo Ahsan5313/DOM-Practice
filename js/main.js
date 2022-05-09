@@ -444,6 +444,9 @@ function createLi(name){
     span.style.color = 'red';
     span.style.marginLeft = '100px';
     span.style.cursor = 'pointer';
+    span.style.backgroundColor = 'white';
+    span.style.padding = '3px';
+    span.style.borderRadius = '50%'
     li.appendChild(span)
     span.addEventListener('click', (a) => {
 
