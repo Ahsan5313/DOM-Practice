@@ -400,22 +400,57 @@
 
 // console.dir( btn2.style)
 
-function $(selector){
+// function $(selector){
 
-    return document.querySelector(selector)
-}
+//     return document.querySelector(selector)
+// }
 
-let btn2 = $('#btn2');
+// let btn2 = $('#btn2');
 // btn2.style.color = 'red';
 // btn2.style.fontSize = '50px';
 // btn2.style.textAlign = 'center';
 // btn2.style.background = 'black';
 
-const h1Style = {
+// const h1Style = {
 
-    background : 'black',
-    color : 'red',
-    fontSize : '50px',
-    textAlign : 'center'
+//     background : 'black',
+//     color : 'red',
+//     fontSize : '50px',
+//     textAlign : 'center'
+// }
+// Object.assign(btn2.style, h1Style)
+
+const inputFilde = document.querySelector('#inputFilde');
+const ulList = document.querySelector('#ulList')
+
+inputFilde.addEventListener('keypress', function(event){
+
+    if(event.keyCode === 13){
+
+       let name = event.target.value;
+       createLi(name)
+       event.target.value = '';
+    }
+})
+
+function createLi(name){
+
+    let li = document.createElement('li');
+    li.innerHTML = name;
+    ulList.appendChild(li)
+
+    let span = document.createElement('span');
+    span.innerHTML = 'X';
+    span.style.color = 'red';
+    span.style.marginLeft = '100px';
+    span.style.cursor = 'pointer';
+    li.appendChild(span)
+    span.addEventListener('click', (a) => {
+
+        ulList.removeChild(li)
+        
+    })
+
+    return li
 }
-Object.assign(btn2.style, h1Style)
+

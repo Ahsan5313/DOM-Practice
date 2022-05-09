@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.heading{
+/* .heading{
 
     color: red;
     font-size: 50px;
@@ -27,4 +27,41 @@
     left: 0;
     top: 0;
     background: red;
+} */
+
+.container{
+
+    width: 100%;
+    height: 800vh;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.container-data{
+
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+
+}
+.container-data input{
+
+    padding: 10px;
+    width: 100%;
+    border:  none;
+    outline: none;
+    
+}
+.container-data ul{
+
+    padding: 15px;
+}
+.container-data ul li{
+
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
 }
