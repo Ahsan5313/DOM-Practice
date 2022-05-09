@@ -348,21 +348,59 @@
 
 
 
-function myReduce(arr, cb, acc){
+// function myReduce(arr, cb, acc){
 
-  for(let i = 0; i < a.length; i++){
+//   for(let i = 0; i < a.length; i++){
 
-    acc = cb(acc, a[i])
-  }
+//     acc = cb(acc, a[i])
+//   }
 
-  return acc
+//   return acc
 
+// }
+
+// function myFun(a , b){
+
+//     return a + b
+// }
+
+// const sum = myReduce([1,2,3,4,5,68], myFun , 0);
+// console.log(sum)
+
+let btn1 = $('#btn1');
+
+let color = ['red', 'green', 'yellow', 'blue', 'black'];
+
+let i = 0;
+
+function clickFun(a){
+
+    let hello = $('#hello');
+    hello.innerHTML = 'This is Ahsan';
+
+    hello.style.background = color[i]
+
+    if(i >= color.length){
+
+        i = 0
+    }else if(color[i] === 'black'){
+
+        hello.style.color = 'white'
+        i++
+    }else{
+
+        i++
+    }
+    
 }
 
-function myFun(a , b){
+btn1.addEventListener('click', clickFun)
 
-    return a + b
+
+
+
+
+function $(selector){
+
+    return document.querySelector(selector)
 }
-
-const sum = myReduce([1,2,3,4,5,68], myFun , 0);
-console.log(sum)
